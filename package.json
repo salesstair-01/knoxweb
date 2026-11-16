@@ -1,0 +1,18 @@
+{
+  "name": "knoxweb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "capture": "node tools/capture/screens.js",
+    "compare": "node tools/compare/compare.js"
+  },
+  "dependencies": {
+    "@puckeditor/core": "0.24.0",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}
