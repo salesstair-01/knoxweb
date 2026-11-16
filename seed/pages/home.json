@@ -1,0 +1,255 @@
+{
+ "id": "home",
+ "slug": "",
+ "title": "Home",
+ "data": {
+  "root": {
+   "props": {
+    "title": "KnoxFit – Premier Fitness Studio in Delhi",
+    "header_style": "overlay"
+   }
+  },
+  "zones": {},
+  "content": [
+   {
+    "type": "HeroCarousel",
+    "props": {
+     "slides": [
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/neil_aaf1544e8f.webp",
+       "mobile_image": "https://d3h5k3uy9yutcq.cloudfront.net/m1_d1a5de4396.jpg",
+       "alt": "Boxing at Knox",
+       "heading": "",
+       "button_label": "",
+       "button_link": ""
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/banner2_30b3e9c3e0.jpg",
+       "mobile_image": "https://d3h5k3uy9yutcq.cloudfront.net/m2_0a21c182f5.jpg",
+       "alt": "Knox studio",
+       "heading": "",
+       "button_label": "",
+       "button_link": ""
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/banner3_8e2406b6dd.jpg",
+       "mobile_image": "https://d3h5k3uy9yutcq.cloudfront.net/m3_0c6c9cca5b.jpg",
+       "alt": "Knox training",
+       "heading": "",
+       "button_label": "",
+       "button_link": ""
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/Banner_32e5687e24.jpg",
+       "mobile_image": "",
+       "alt": "Knox members",
+       "heading": "",
+       "button_label": "",
+       "button_link": ""
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/banner_6_3e41c94f11.png",
+       "mobile_image": "",
+       "alt": "Knox",
+       "heading": "",
+       "button_label": "",
+       "button_link": ""
+      }
+     ],
+     "heading": "Train with the best",
+     "text": "Whether it’s high-intensity lab sessions, personalized coaching, or immersive RESET retreats, we’re here to support transformative fitness journeys.",
+     "button_label": "Are you ready to begin",
+     "button_link": "/new-to-knox",
+     "show_counter": true,
+     "autoplay_seconds": 6,
+     "id": "HeroCarousel-1"
+    }
+   },
+   {
+    "type": "IntroText",
+    "props": {
+     "label": "Welcome to Knox",
+     "lead": "<p>At Knox, we transcend traditional gym workouts - offering a holistic, science-backed fitness experience that blends precision training with real-world performance.</p>",
+     "aside_text": "Start your transformation at just ₹1,499. Are you in?",
+     "aside_button_label": "Yes",
+     "aside_button_link": "/pricing-plans",
+     "spacing": "normal",
+     "id": "IntroText-1",
+     "cards": [
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/group_classes_98201ff33b_5bfc96d7ed.webp",
+       "label": "Group Classes",
+       "link": "/programs"
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/personal_training_915b3a8733_b87e495e5e.webp",
+       "label": "Personal Training",
+       "link": "/programs"
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/reset_446d6c5c43_bfffed7296.webp",
+       "label": "RESET: Retreats",
+       "link": "/reset-retreats"
+      }
+     ]
+    }
+   },
+   {
+    "type": "ProgramFeature",
+    "props": {
+     "label": "Our Programs",
+     "image": "https://d3h5k3uy9yutcq.cloudfront.net/our_programs_4e9b3f1421.webp",
+     "ticker_items": [
+      {
+       "text": "New year new you"
+      },
+      {
+       "text": "Trial offers"
+      }
+     ],
+     "eyebrow": "The Lab",
+     "headline": "Try three group classes at just",
+     "highlight": "INR 999/-",
+     "button_label": "Take a trial",
+     "button_link": "/pricing-plans",
+     "id": "ProgramFeature-1"
+    }
+   },
+   {
+    "type": "Accordion",
+    "props": {
+     "label": "The Knox Edge",
+     "heading": "Knox is a high-touch ecosystem for transformation - built for those who expect more from their movement.",
+     "body": "Explore the signature elements that set Knox apart - and discover why hundreds of high-performers across Delhi and Gurugram choose us as their fitness destination.",
+     "layout": "split",
+     "items": [
+      {
+       "question": "Individual Assessments by coaches",
+       "answer": "<p>We believe every fitness journey starts with understanding you. Our coaches conduct in-depth individual assessments to evaluate your fitness level, mobility, strength, and overall health. This ensures your training program is built to suit your unique needs and maximize your progress.</p>"
+      },
+      {
+       "question": "Identification of Weak Points",
+       "answer": "<p>Your fitness goals are only as strong as your foundation. At Knox, our coaches specialize in identifying weak points—whether it's posture, mobility, or specific muscle imbalances—and creating targeted strategies to address them. The result? Improved performance, reduced risk of injury, and greater confidence in every move.</p>"
+      },
+      {
+       "question": "Goal Oriented Training",
+       "answer": "<p>Whether you're training for strength, endurance, weight loss, or simply to feel good, our programs are laser-focused on your personal objectives. Our coaches design every session with your goals in mind, ensuring that each workout moves you closer to achieving the results you desire.</p>"
+      },
+      {
+       "question": "Expert / Qualified Trainers",
+       "answer": "<p>At Knox, our trainers are more than just fitness enthusiasts—they're industry experts. Each coach is certified, experienced, and passionate about helping you achieve your goals. They bring diverse skill sets and cutting-edge knowledge to deliver personalized, effective, and safe training sessions tailored just for you.</p>"
+      },
+      {
+       "question": "Cross - Training with Different Coaches",
+       "answer": "<p>At Knox, we embrace the power of variety. Our coaches bring unique skills and expertise—from strength training to Pilates, boxing, and mobility work. You'll have the opportunity to train with multiple experts, each helping you achieve specific aspects of your fitness journey. This approach keeps your workouts fresh, exciting, and multidimensional.</p>"
+      }
+     ],
+     "id": "Accordion-1"
+    }
+   },
+   {
+    "type": "FeatureSlider",
+    "props": {
+     "label": "Stay in the know",
+     "slides": [
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/reset_2_2b59ec825a.webp",
+       "kicker": "Wellness beyond the Studio:",
+       "kicker_strong": "RESET Retreats",
+       "title": "Wellness beyond the Studio: RESET",
+       "body": "<p>RESET is our signature fitness and wellness retreat - it’s not just an escape, it’s a recalibration.</p><p>Through curated workouts, nourishing meals, and immersive experiences, RESET creates space to slow down, tune in, and return stronger in body and in mind.</p>",
+       "button_label": "Learn more",
+       "button_link": "/reset-retreats"
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/reset_3_893423e40c.webp",
+       "kicker": "Wellness beyond the Studio:",
+       "kicker_strong": "RESET Retreats",
+       "title": "Wellness beyond the Studio: RESET",
+       "body": "<p>RESET is our signature fitness and wellness retreat - it’s not just an escape, it’s a recalibration.</p><p>Through curated workouts, nourishing meals, and immersive experiences, RESET creates space to slow down, tune in, and return stronger in body and in mind.</p>",
+       "button_label": "Learn more",
+       "button_link": "/reset-retreats"
+      },
+      {
+       "image": "https://d3h5k3uy9yutcq.cloudfront.net/reset_4_f44c4855ad.webp",
+       "kicker": "Wellness beyond the Studio:",
+       "kicker_strong": "RESET Retreats",
+       "title": "Wellness beyond the Studio: RESET",
+       "body": "<p>RESET is our signature fitness and wellness retreat - it’s not just an escape, it’s a recalibration.</p><p>Through curated workouts, nourishing meals, and immersive experiences, RESET creates space to slow down, tune in, and return stronger in body and in mind.</p>",
+       "button_label": "Learn more",
+       "button_link": "/reset-retreats"
+      }
+     ],
+     "id": "FeatureSlider-1"
+    }
+   },
+   {
+    "type": "Ticker",
+    "props": {
+     "items": [
+      {
+       "text": "New year new you"
+      },
+      {
+       "text": "Trial offers"
+      }
+     ],
+     "style_variant": "lime",
+     "id": "Ticker-1"
+    }
+   },
+   {
+    "type": "HeadingCta",
+    "props": {
+     "heading": "Swap stuff for strength. Give the gift of movement, energy, and long-term wellbeing",
+     "button_label": "Start their journey",
+     "button_link": "/pricing-plans",
+     "variant": "side_images",
+     "left_image": "https://d3h5k3uy9yutcq.cloudfront.net/card1_06cadd0d27.jpg",
+     "right_image": "https://d3h5k3uy9yutcq.cloudfront.net/card2_29911a5937.jpg",
+     "id": "HeadingCta-1"
+    }
+   },
+   {
+    "type": "LinkTiles",
+    "props": {
+     "label": "Where do you need to go?",
+     "testimonials": [
+      {
+       "quote": "There is no place like knox in the world… they have the most helpful coaches (that actually care about your progress). It’s always fun to go in for a session, bump into your friends and get a coffee after!!",
+       "name": "Tryambika Shah",
+       "location": "Delhi",
+       "avatar": "https://d3h5k3uy9yutcq.cloudfront.net/women_pic_5f1a43209f.webp"
+      }
+     ],
+     "tiles": [
+      {
+       "title": "Download our\nApp for easy access.",
+       "link": "https://appurl.io/",
+       "badge": "qr"
+      },
+      {
+       "title": "Buy credits for your\nMembership Plan",
+       "link": "/pricing-plans",
+       "badge": "arrow"
+      },
+      {
+       "title": "View The Lab™\nprograms schedule",
+       "link": "/schedule-class",
+       "badge": "arrow"
+      }
+     ],
+     "id": "LinkTiles-1"
+    }
+   },
+   {
+    "type": "Studios",
+    "props": {
+     "label": "Our Studios",
+     "show_map": true,
+     "id": "Studios-1"
+    }
+   }
+  ]
+ }
+}

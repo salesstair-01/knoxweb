@@ -1,0 +1,22 @@
+.section { padding: 48px var(--gutter) 64px; display: flex; flex-direction: column; gap: 24px; }
+.intro { display: flex; flex-direction: column; gap: 16px; }
+.heading { font-size: 24px; line-height: 28.8px; color: #fff; font-weight: 400; }
+.body { font-size: 16px; line-height: 24px; color: var(--c-text-muted); }
+.list { display: flex; flex-direction: column; gap: 6px; }
+.item { background: var(--c-surface); border-radius: 4px 4px 10px 10px; }
+.question {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 14px 32px 14px 24px; text-align: left;
+  font-size: 20px; line-height: 24px; font-weight: 500; letter-spacing: 0.19px; color: var(--c-text);
+}
+.chev, .chev_open { flex: 0 0 auto; transition: transform 200ms; }
+.chev_open { transform: rotate(180deg); }
+.answer { padding: 0 24px 18px; font-size: 16px; line-height: 24px; color: var(--c-text-muted); }
+@media (min-width: 768px) {
+  .split { flex-direction: row; gap: 16px; padding-bottom: 120px; }
+  .split .intro, .split .list { flex: 1 1 0; }
+  .heading { font-size: 28px; line-height: 33.6px; }
+  .body { font-size: 24px; line-height: 33.6px; }
+  .split .list { margin-top: 62px; }
+  .question { font-size: 24px; line-height: 28.8px; padding: 14px 24px; }
+}

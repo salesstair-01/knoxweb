@@ -1,0 +1,14 @@
+.ticker {
+  margin: 32px var(--gutter);
+  border-radius: 999px; overflow: hidden; white-space: nowrap;
+  font-family: var(--ff-display); font-size: 13px; line-height: 32px; letter-spacing: 0.01em;
+}
+.embedded { margin: 0; }
+.lime { background: var(--c-accent); color: #111; }
+.glass { background: rgba(250, 250, 250, 0.35); color: #fff; backdrop-filter: blur(6px); }
+.track { display: inline-flex; animation: scroll 40s linear infinite; }
+.item { display: inline-flex; align-items: center; gap: 12px; padding-left: 12px; }
+.star { font-size: 11px; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .track { animation: none; } }
+@media (min-width: 768px) { .ticker { font-size: 14px; } }

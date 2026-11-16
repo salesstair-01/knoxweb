@@ -1,0 +1,42 @@
+.section { padding: 0 var(--gutter) 32px; }
+.notice { padding: 32px 0; color: var(--c-text-muted); }
+
+.pills { display: flex; justify-content: space-between; padding: 4px; border-radius: 999px; background: var(--c-surface); margin: 0 2px; }
+.pill, .pill_active { flex: 1 1 0; padding: 10px 8px; border-radius: 999px; font-size: 12px; line-height: 18px; white-space: nowrap; }
+.pill_active { background: #000; color: #fff; }
+.pills_small { width: fit-content; margin: 0 auto 8px; }
+.pills_small .pill, .pills_small .pill_active { flex: 0 0 auto; padding: 8px 14px; font-size: 14px; }
+
+.tiers_heading { font-family: var(--ff-display); font-size: 28px; line-height: 40px; text-transform: uppercase; text-align: center; margin: 32px 0 16px; }
+.group_heading { font-size: 24px; line-height: 36px; margin: 24px 0; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.card {
+  display: flex; flex-direction: column; align-items: center; min-height: 282px;
+  padding: 16px; border-radius: var(--radius-card);
+  background: var(--c-surface-2); border: 1px solid var(--c-accent-border);
+}
+.name { font-size: 14px; line-height: 21px; font-weight: 600; text-align: center; }
+.price { font-size: 40px; line-height: 60px; color: #fff; margin: auto 0; padding: 24px 0 16px; }
+.desc { display: flex; gap: 16px; align-items: flex-start; align-self: stretch; padding: 0 0 16px 80px; font-size: 11px; line-height: 16.5px; min-height: 49px; }
+.diamond { font-size: 14px; line-height: 16px; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-self: stretch; padding: 0 12px 0; }
+.gift, .buy {
+  display: flex; align-items: center; justify-content: center; height: 34px; border-radius: 999px;
+  font-family: var(--ff-display); font-size: 14px; line-height: 21px; letter-spacing: 0.01em; text-transform: uppercase;
+}
+.gift { border: 1px solid var(--c-accent); color: var(--c-accent); }
+.buy { background: var(--c-accent); color: #292929; }
+
+@media (min-width: 768px) {
+  .section { padding: 0 var(--inset) 64px; }
+  .pills { width: 517px; margin: 0 auto; padding: 3px; }
+  .pill, .pill_active { padding: 12px 8px; font-size: 13px; line-height: 19.5px; }
+  .tiers_heading { font-size: 32px; margin: 32px 0 20px; }
+  .group_heading { font-size: 32px; line-height: 48px; margin: 64px 0 24px; }
+  .grid { grid-template-columns: repeat(3, 1fr); gap: 24px 24px; }
+  .card { padding: 24px 16px 16px; border-color: transparent; }
+  .name { font-size: 16px; line-height: 22.9px; }
+  .price { font-size: 48px; line-height: 48px; padding: 32px 0 32px; }
+  .desc { padding-left: 80px; padding-right: 16px; }
+  .actions { padding: 0; gap: 12px; }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "pricing-plans",
+ "slug": "pricing-plans",
+ "title": "Pricing Plans",
+ "data": {
+  "root": {
+   "props": {
+    "title": "Pricing Plans – KnoxFit",
+    "header_style": "solid"
+   }
+  },
+  "zones": {},
+  "content": [
+   {
+    "type": "PageTitle",
+    "props": {
+     "title": "Train on Your Terms",
+     "columns": [
+      {
+       "text": "Choose between our signature group classes or focused private sessions."
+      },
+      {
+       "text": "Use these credit packs to redeem against scheduled classes while booking."
+      }
+     ],
+     "id": "PageTitle-1"
+    }
+   },
+   {
+    "type": "PackageGrid",
+    "props": {
+     "mode": "tabs",
+     "default_tab": "lab",
+     "category_id": "lab_packs",
+     "heading": "",
+     "id": "PackageGrid-1"
+    }
+   },
+   {
+    "type": "Studios",
+    "props": {
+     "label": "Our Studios",
+     "show_map": true,
+     "id": "Studios-1"
+    }
+   }
+  ]
+ }
+}
