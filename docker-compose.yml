@@ -1,0 +1,37 @@
+# Local stack: admin/builder on :3000, public static site on :8080.
+# Build the Next app first: `npm ci && npm run build`, then `docker compose up --build`.
+# If Docker Hub rate-limits you: NODE_IMAGE=mirror.gcr.io/library/node:22-alpine
+services:
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile.admin
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:22-alpine}
+    ports: ["3000:3000"]
+    environment:
+      SITE_RELEASES_DIR: /srv/site
+      RENDER_TOKEN: ${RENDER_TOKEN:-dev-render-token}
+    volumes:
+      - site:/srv/site
+      - admin-data:/app/.data
+
+  site:
+    build:
+      context: ./site-server
+      args:
+        NODE_IMAGE: ${NODE_IMAGE:-node:22-alpine}
+    ports: ["8080:8080"]
+    environment:
+      PORT: "8080"
+    volumes:
+      - site:/srv/site:ro
+      # Stand-in for the middleware: it owns this file and rewrites it when Zoho prices change.
+      - ./public/data:/srv/prices:ro
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      interval: 10s
+
+volumes:
+  site:
+  admin-data:

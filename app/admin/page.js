@@ -4,6 +4,8 @@ import styles from "./admin.module.css";
 
 export const dynamic = "force-dynamic";
 
+const site_url = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:8080";
+
 export default async function AdminPage() {
   const pages = await get_pages_repository().list_pages();
   return (
@@ -17,7 +19,7 @@ export default async function AdminPage() {
           {pages.map((page) => (
             <tr key={page.id}>
               <td>{page.title}</td>
-              <td><a href={`/${page.slug}`} target="_blank" rel="noreferrer">/{page.slug}</a></td>
+              <td><a href={`${site_url}/${page.slug}`} target="_blank" rel="noreferrer">/{page.slug}</a></td>
               <td>
                 {page.status}
                 {page.status === "published" && page.has_unpublished_changes ? " (unpublished changes)" : ""}

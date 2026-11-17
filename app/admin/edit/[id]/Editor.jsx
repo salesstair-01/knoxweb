@@ -5,14 +5,17 @@ import { Puck, usePuck } from "@puckeditor/core";
 import "@puckeditor/core/puck.css";
 import config from "@/puck/config";
 
+const site_url = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:8080";
+
 async function send(page_id, action, data) {
   const response = await fetch(`/api/pages/${page_id}`, {
     method: "PUT",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({ action, data }),
   });
-  if (!response.ok) throw new Error(`${action} failed`);
-  return response.json();
+  const body = await response.json();
+  if (!response.ok) throw new Error(body.error || `${action} failed`);
+  return body;
 }
 
 export default function Editor({ page_id, slug, initial_data }) {
@@ -22,7 +25,7 @@ export default function Editor({ page_id, slug, initial_data }) {
     set_status_text(action === "publish" ? "Publishing…" : "Saving…");
     try {
       await send(page_id, action, data);
-      set_status_text(action === "publish" ? "Published" : "Draft saved");
+      set_status_text(action === "publish" ? "Published to site" : "Draft saved");
     } catch (error) {
       set_status_text(error.message);
     }
@@ -33,7 +36,7 @@ export default function Editor({ page_id, slug, initial_data }) {
     return (
       <>
         <span style={{ fontSize: 13, color: "#666" }}>{status_text}</span>
-        <a href={`/${slug}`} target="_blank" rel="noreferrer" style={{ fontSize: 13 }}>View live</a>
+        <a href={`${site_url}/${slug}`} target="_blank" rel="noreferrer" style={{ fontSize: 13 }}>View live</a>
         <button data-testid="save-draft" onClick={() => run("save_draft", appState.data)} style={{ padding: "6px 12px", border: "1px solid #ccc", borderRadius: 6 }}>
           Save draft
         </button>
