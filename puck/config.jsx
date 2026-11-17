@@ -291,13 +291,7 @@ export const config = {
         const { default_tab, category_id, heading, ...rest } = fields;
         return data.props.mode === "category" ? { ...rest, category_id, heading } : { ...rest, default_tab };
       },
-      // Prices are never stored: `catalog` is filled from the packages source at render time.
-      resolveData: async (data, { metadata }) => {
-        const catalog = metadata && metadata.load_catalog
-          ? await metadata.load_catalog({ mode: data.props.mode, category_id: data.props.category_id, heading: data.props.heading })
-          : null;
-        return { props: { catalog } };
-      },
+      // Prices are never stored in the page: the block reads prices.json in the browser.
       defaultProps: { mode: "category", default_tab: "lab", category_id: "lab_packs", heading: "" },
       render: plain(PackageGrid),
     },

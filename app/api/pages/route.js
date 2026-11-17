@@ -7,7 +7,7 @@ export async function GET() {
 export async function POST(request) {
   const { slug, title } = await request.json();
   const clean_slug = String(slug || "").trim().replace(/^\/+|\/+$/g, "").toLowerCase();
-  if (!/^[a-z0-9-]+(\/[a-z0-9-]+)*$/.test(clean_slug) || ["admin", "api", "buy"].includes(clean_slug.split("/")[0])) {
+  if (!/^[a-z0-9-]+(\/[a-z0-9-]+)*$/.test(clean_slug) || ["admin", "api", "data"].includes(clean_slug.split("/")[0])) {
     return Response.json({ error: "Invalid or reserved slug" }, { status: 400 });
   }
   const page = await get_pages_repository().create_page({

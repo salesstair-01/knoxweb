@@ -40,3 +40,6 @@
   .desc { padding-left: 80px; padding-right: 16px; }
   .actions { padding: 0; gap: 12px; }
 }
+.placeholder { animation: pulse 1.2s ease-in-out infinite; border-color: transparent; }
+@keyframes pulse { 50% { opacity: 0.55; } }
+@media (prefers-reduced-motion: reduce) { .placeholder { animation: none; } }

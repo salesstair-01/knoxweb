@@ -1,15 +1,14 @@
 import { notFound, redirect } from "next/navigation";
-import { Render, resolveAllData } from "@puckeditor/core";
+import { Render } from "@puckeditor/core";
 import config from "@/puck/config";
 import { get_pages_repository } from "@/lib/server/pages_repository";
 import { PageVisibility } from "@/lib/server/page_visibility";
-import { server_catalog_metadata } from "@/lib/server/catalog_metadata";
 
-// Short ISR window: picks up price changes and publish_at/expire_at boundaries.
-// Publishing also revalidates the page immediately.
+// Prices are not part of the page: PackageGrid reads prices.json in the browser.
+// Publishing revalidates the page; the short window covers publish_at/expire_at.
 export const revalidate = 60;
 
-const RESERVED = new Set(["admin", "api", "buy", "_next"]);
+const RESERVED = new Set(["admin", "api", "data", "_next"]);
 
 async function load_live_page(slug_parts) {
   const slug = (slug_parts || []).join("/");
@@ -34,8 +33,5 @@ export default async function PublicPage({ params }) {
   // 307, not 301: the slug may be reused for a later campaign.
   if (state === "expired") redirect(page.expired_redirect || "/pricing-plans");
 
-  const metadata = server_catalog_metadata();
-  const resolved = await resolveAllData(page.published_data, config, metadata);
-
-  return <Render config={config} data={resolved} />;
+  return <Render config={config} data={page.published_data} />;
 }

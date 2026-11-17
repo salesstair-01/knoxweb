@@ -1,6 +1,7 @@
 {
- "captured_at": "2026-11-16",
- "source": "knoxfit.in /api/zoho/items (static snapshot for POC)",
+ "schema_version": 1,
+ "generated_at": "2026-11-16T00:00:00Z",
+ "currency": "INR",
  "categories": [
   {
    "id": "first_timer_lab",
@@ -38,7 +39,7 @@
    "name": "The Lab 1 Promo",
    "rate": 599,
    "description": "This package offers 1 Studio Class with validity of 7 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000004680039",
@@ -46,7 +47,7 @@
    "name": "The Lab 3 Promo",
    "rate": 999,
    "description": "This package offers 3 Studio Class with validity of 15 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000006551103",
@@ -54,7 +55,7 @@
    "name": "The Lab 1",
    "rate": 1549,
    "description": "This package offers 1 LAb sessions 7 days expiry",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000006551129",
@@ -62,7 +63,7 @@
    "name": "The Lab Unlimited 1",
    "rate": 13999,
    "description": "This package offers unlimited sessions, expiry of 30 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000006551138",
@@ -70,7 +71,7 @@
    "name": "The Lab Unlimited 3",
    "rate": 32999,
    "description": "This package offers unlimited sessions expiry of 3 Months",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000006228959",
@@ -78,7 +79,7 @@
    "name": "The Lab 5",
    "rate": 4949,
    "description": "This package offers 5 group Classes with validity of 30 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000006551147",
@@ -86,7 +87,7 @@
    "name": "The Lab Unlimited 6",
    "rate": 51999,
    "description": "This package offers unlimited sessions expiry of 6 months",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000025921238",
@@ -94,7 +95,7 @@
    "name": "The Lab Unlimited 12M",
    "rate": 93599,
    "description": "This package offers unlimited sessions expiry of 12 months ",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000009197613",
@@ -102,7 +103,7 @@
    "name": "Lab unlimited 1 + 4 PT",
    "rate": 23799,
    "description": "",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000009197622",
@@ -110,7 +111,7 @@
    "name": "Lab unlimited 3 + 12 PT",
    "rate": 60949,
    "description": "",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000008896629",
@@ -118,7 +119,7 @@
    "name": "PT Trial Promo",
    "rate": 1999,
    "description": "This package offers 1 Studio Classes Validity 7 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881461",
@@ -126,7 +127,7 @@
    "name": "Select Studio 1 Solo",
    "rate": 3499,
    "description": "This package offers 1 Studio Class with validity of 7 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881479",
@@ -134,7 +135,7 @@
    "name": "Select Studio 5 Solo",
    "rate": 16999,
    "description": "This package offers 5 Studio Classes with validity of 45 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881497",
@@ -142,7 +143,7 @@
    "name": "Select Studio 12 Solo",
    "rate": 38999,
    "description": "This package offers 12 Studio Classes with validity of 60 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881515",
@@ -150,7 +151,7 @@
    "name": "Select Studio 30 Solo",
    "rate": 83999,
    "description": "This package offers 30 Studio Classes with validity of 120 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000014779168",
@@ -158,7 +159,7 @@
    "name": "Select Studio 50 Solo",
    "rate": 132999,
    "description": "This package offers 50 Studio Classes with validity of 180 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881533",
@@ -166,7 +167,7 @@
    "name": "Select Studio 100 Solo",
    "rate": 254999,
    "description": "This package offers 100 Studio Classes with validity of 365 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881470",
@@ -174,7 +175,7 @@
    "name": "Select Studio 1 Duo",
    "rate": 5599,
    "description": "This package offers 1 Studio Class with validity of 7 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881488",
@@ -182,7 +183,7 @@
    "name": "Select Studio 5 Duo",
    "rate": 27199,
    "description": "This package offers 5 Studio Classes with validity of 45 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881506",
@@ -190,7 +191,7 @@
    "name": "Select Studio 12 Duo",
    "rate": 62399,
    "description": "This package offers 12 Studio Classes with validity of 60 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881524",
@@ -198,7 +199,7 @@
    "name": "Select Studio 30 Duo",
    "rate": 136999,
    "description": "This package offers 30 Studio Classes with validity of 120 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000014779147",
@@ -206,7 +207,7 @@
    "name": "Select Studio 50 Duo",
    "rate": 213999,
    "description": "This package offers 50 Studio Classes with validity of 180 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881542",
@@ -214,7 +215,7 @@
    "name": "Select Studio 100 Duo",
    "rate": 407999,
    "description": "This package offers 100 Studio Classes with validity of 365 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881371",
@@ -222,7 +223,7 @@
    "name": "Plus Studio 1 Solo",
    "rate": 4199,
    "description": "This package offers 1 Studio Class with validity of 7 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881389",
@@ -230,7 +231,7 @@
    "name": "Plus Studio 5 Solo",
    "rate": 20499,
    "description": "This package offers 5 Studio Classes with validity of 45 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881407",
@@ -238,7 +239,7 @@
    "name": "Plus Studio 12 Solo",
    "rate": 46999,
    "description": "This package offers 12 Studio Classes with validity of 60 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881425",
@@ -246,7 +247,7 @@
    "name": "Plus Studio 30 Solo",
    "rate": 98999,
    "description": "This package offers 30 Studio Classes with validity of 120 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000014779177",
@@ -254,7 +255,7 @@
    "name": "Plus Studio 50 Solo",
    "rate": 154999,
    "description": "This package offers 50 Studio Classes with validity of 180 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881443",
@@ -262,7 +263,7 @@
    "name": "Plus Studio 100 Solo",
    "rate": 294999,
    "description": "This package offers 100 Studio Classes with validity of 365 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881380",
@@ -270,7 +271,7 @@
    "name": "Plus Studio 1 Duo",
    "rate": 6799,
    "description": "This package offers 1 Studio Class with validity of 7 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881398",
@@ -278,7 +279,7 @@
    "name": "Plus Studio 5 Duo",
    "rate": 32799,
    "description": "This package offers 5 Studio Classes with validity of 45 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881416",
@@ -286,7 +287,7 @@
    "name": "Plus Studio 12 Duo",
    "rate": 75199,
    "description": "This package offers 12 Studio Classes with validity of 60 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881434",
@@ -294,7 +295,7 @@
    "name": "Plus Studio 30 Duo",
    "rate": 158399,
    "description": "This package offers 30 Studio Classes with validity of 120 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000021644532",
@@ -302,7 +303,7 @@
    "name": "Plus Studio 50 Duo",
    "rate": 252999,
    "description": "This package offers 50 Studio Classes with validity of 180 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000003881452",
@@ -310,7 +311,7 @@
    "name": "Plus Studio 100 Duo",
    "rate": 471999,
    "description": "This package offers 100 Studio Classes with validity of 365 days",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000014779186",
@@ -318,7 +319,7 @@
    "name": "Gym access 1",
    "rate": 1899,
    "description": "",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000014907013",
@@ -326,7 +327,7 @@
    "name": "Gym access 5",
    "rate": 8750,
    "description": "",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000014907022",
@@ -334,7 +335,7 @@
    "name": "Gym access 10",
    "rate": 14999,
    "description": "",
-   "status": "active"
+   "active": true
   },
   {
    "id": "1236514000022299271",
@@ -342,7 +343,7 @@
    "name": "Gym access 30",
    "rate": 29999,
    "description": "",
-   "status": "active"
+   "active": true
   }
  ]
 }

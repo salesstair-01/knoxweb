@@ -1,7 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { site_settings } from "@/lib/site_settings";
+import { PriceCatalog } from "@/lib/prices/price_catalog";
+import { prices_url, checkout_base_url } from "@/lib/prices/prices_config";
 import styles from "./PackageGrid.module.css";
+
+function checkout_link(package_id, is_gift) {
+  const params = new URLSearchParams({ item_id: package_id });
+  if (is_gift) params.set("gift", "1");
+  return `${checkout_base_url}?${params}`;
+}
+
+// Fetched once per page view and shared by every PackageGrid on the page.
+let prices_request = null;
+
+function load_prices_file() {
+  if (prices_request === null) {
+    prices_request = fetch(prices_url, { cache: "no-cache" })
+      .then((response) => (response.ok ? response.json() : null))
+      .catch(() => null);
+  }
+  return prices_request;
+}
 
 function format_rate(rate) {
   return `₹${rate}++`;
@@ -21,8 +42,8 @@ function PackageCard({ item }) {
         ) : null}
       </p>
       <div className={styles.actions}>
-        <a href={`/buy/${item.id}?gift=1`} className={styles.gift}>Gift Session</a>
-        <a href={`/buy/${item.id}`} className={styles.buy}>Buy Credit Pack</a>
+        <a href={checkout_link(item.id, true)} className={styles.gift}>Gift Session</a>
+        <a href={checkout_link(item.id, false)} className={styles.buy}>Buy Credit Pack</a>
       </div>
     </li>
   );
@@ -90,8 +111,32 @@ function Tabs({ tabs, default_tab }) {
   );
 }
 
-export default function PackageGrid({ catalog, default_tab }) {
-  let body = <p className={styles.notice}>Loading packages…</p>;
+function PlaceholderCards() {
+  return (
+    <ul className={styles.grid} aria-busy="true" aria-label="Loading prices">
+      {[0, 1, 2].map((index) => (
+        <li key={index} className={`${styles.card} ${styles.placeholder}`} />
+      ))}
+    </ul>
+  );
+}
+
+export default function PackageGrid({ mode, category_id, heading, default_tab }) {
+  const [catalog, set_catalog] = useState(null);
+
+  useEffect(() => {
+    let is_current = true;
+    load_prices_file().then((prices_file) => {
+      if (!is_current) return;
+      const price_catalog = new PriceCatalog({ prices_file, pricing_menu: site_settings.pricing_menu });
+      set_catalog(price_catalog.build({ mode, category_id, heading }));
+    });
+    return () => {
+      is_current = false;
+    };
+  }, [mode, category_id, heading]);
+
+  let body = <PlaceholderCards />;
 
   if (catalog && catalog.status === "unavailable") {
     body = (

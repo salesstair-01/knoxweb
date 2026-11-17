@@ -1,13 +1,12 @@
 import { revalidatePath } from "next/cache";
 import { get_pages_repository } from "@/lib/server/pages_repository";
-import { strip_resolved_props } from "@/lib/strip_resolved";
 
 // PUT { action: "save_draft" | "publish" | "unpublish", data }
 export async function PUT(request, { params }) {
   const { id } = await params;
   const { action, data } = await request.json();
   const repository = get_pages_repository();
-  const clean_data = data ? strip_resolved_props(data) : null;
+  const clean_data = data || null;
 
   let page = null;
   if (action === "save_draft") page = await repository.save_draft(id, clean_data);

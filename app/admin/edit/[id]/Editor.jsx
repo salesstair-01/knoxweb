@@ -1,16 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Puck, usePuck } from "@puckeditor/core";
 import "@puckeditor/core/puck.css";
 import config from "@/puck/config";
-
-async function load_catalog(params) {
-  const query = new URLSearchParams();
-  for (const [key, value] of Object.entries(params)) if (value) query.set(key, value);
-  const response = await fetch(`/api/packages/catalog?${query}`);
-  return response.ok ? response.json() : { status: "unavailable" };
-}
 
 async function send(page_id, action, data) {
   const response = await fetch(`/api/pages/${page_id}`, {
@@ -24,7 +17,6 @@ async function send(page_id, action, data) {
 
 export default function Editor({ page_id, slug, initial_data }) {
   const [status_text, set_status_text] = useState("");
-  const metadata = useMemo(() => ({ load_catalog }), []);
 
   async function run(action, data) {
     set_status_text(action === "publish" ? "Publishing…" : "Saving…");
@@ -53,7 +45,6 @@ export default function Editor({ page_id, slug, initial_data }) {
     <Puck
       config={config}
       data={initial_data}
-      metadata={metadata}
       headerPath={`/${slug}`}
       onPublish={(data) => run("publish", data)}
       overrides={{ headerActions: ({ children }) => (<><HeaderActions />{children}</>) }}
